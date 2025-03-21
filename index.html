@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ZAHA for Doctors</title>
+  <style>
+    /* Basic Global Resets */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    /* Container & Section Layouts */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+    }
+
+    section {
+      margin-bottom: 2rem;
+      background: #fff;
+      border-radius: 4px;
+      padding: 2rem;
+      box-shadow: 0 0 6px rgba(0,0,0,0.1);
+    }
+
+    h1, h2, h3 {
+      color: #003366; 
+      margin-bottom: 1rem;
+    }
+    h1 {
+      font-size: 2rem;
+    }
+    h2 {
+      font-size: 1.4rem;
+    }
+
+    p {
+      margin-bottom: 1rem;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: url('placeholder-hero.jpg') center/cover no-repeat;
+      color: #fff;
+      text-align: center;
+      position: relative;
+      margin-bottom: 2rem;
+    }
+    .hero-overlay {
+      background-color: rgba(0, 0, 0, 0.4);
+      padding: 4rem 1rem;
+    }
+    .hero h1 {
+      margin-bottom: 1rem;
+    }
+    .hero .subhead {
+      margin-bottom: 2rem;
+      font-size: 1.2rem;
+      font-weight: 400;
+    }
+    .hero .cta-button {
+      background: #ff7f50;
+      padding: 0.75rem 1.5rem;
+      border-radius: 4px;
+      font-weight: bold;
+      transition: background 0.3s ease;
+      display: inline-block;
+    }
+    .hero .cta-button:hover {
+      background: #ff6f3a;
+    }
+
+    /* Quick Snapshot / Icon Grid */
+    .quick-snapshot {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: space-between;
+    }
+    .snapshot-card {
+      flex: 1 1 calc(25% - 1rem);
+      min-width: 200px;
+      background: #fff;
+      text-align: center;
+      padding: 1rem;
+      border-radius: 4px;
+      box-shadow: 0 0 6px rgba(0,0,0,0.1);
+    }
+    .snapshot-card img {
+      max-width: 60px;
+      margin-bottom: 1rem;
+    }
+
+    /* Dual Column Layout (Clinical Efficacy & Emotional Hook) */
+    .dual-column {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+    .dual-column img {
+      flex: 1 1 300px;
+      max-width: 300px;
+    }
+    .dual-column .text-block {
+      flex: 1 1 400px;
+    }
+
+    /* Testimonials Layout */
+    .testimonials {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .testimonial {
+      flex: 1 1 calc(33% - 1rem);
+      background: #f1f1f1;
+      padding: 1rem;
+      border-radius: 4px;
+      font-style: italic;
+      position: relative;
+    }
+    .testimonial::before {
+      content: "“";
+      font-size: 2rem;
+      color: #ff7f50;
+      position: absolute;
+      top: -10px;
+      left: 10px;
+    }
+    .testimonial::after {
+      content: "”";
+      font-size: 2rem;
+      color: #ff7f50;
+      position: absolute;
+      bottom: -10px;
+      right: 10px;
+    }
+
+    /* Final CTA */
+    .final-cta {
+      text-align: center;
+      background: #dedede;
+      border-radius: 4px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 0 6px rgba(0,0,0,0.1);
+    }
+    .final-cta .cta-button {
+      display: inline-block;
+      margin: 0.5rem;
+      background: #ff7f50;
+      color: #fff;
+      padding: 0.75rem 1.5rem;
+      border-radius: 4px;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+    .final-cta .cta-button:hover {
+      background: #ff6f3a;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      color: #555;
+      padding: 1rem;
+      border-top: 1px solid #ccc;
+    }
+    footer a {
+      color: #003366;
+      text-decoration: none;
+      margin: 0 0.5rem;
+      font-weight: bold;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
+      .dual-column {
+        flex-direction: column;
+      }
+      .quick-snapshot {
+        flex-direction: column;
+      }
+      .testimonials {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-overlay">
+      <h1>ZAHA:The Hero in Child’s Health Story</h1>
+      <p class="subhead">Once upon a time, every cough, sneeze, and sore throat would worry parents and make children anxious.<br>But then came ZAHA—more than just medicine, a caring companion guiding little heroes back to health</p>
+<img src="D:\2019 Q1\HO meeting\2025\ZAHA HTML/10.PNG"style="max-width: 80%; height: auto;" /> 
+
+</p>     
+
+<a href="#quick-snapshot" class="cta-button">Explore ZAHA’s Clinical Advantages</a>
+    </div>
+  </section>
+
+  <!-- Quick Snapshot Section -->
+  <section class="container" id="quick-snapshot">
+    <h2>ZAHA: More Than Medicine—It’s a Companion in Every URTI Journey</h2>
+    
+<div class="quick-snapshot">
+      <!-- Card 1 -->
+      <div class="snapshot-card">
+        <img src="D:\2019 Q1\HO meeting\2025\ZAHA HTML/1.png"style="max-width: 68%; height: auto;" /> 
+
+
+        <h3>Child-Friendly Flavor</h3>
+        <p>
+          ZAHA's Strawberry & Banana flavor is the top choice for kids under 14,<p/> Improving compliance,
+
+reducing refusals,& ensuring accurate dosing
+        </p>
+      </div>
+      <!-- Card 2 -->
+      <div class="snapshot-card">
+        <img src="D:\2019 Q1\HO meeting\2025\ZAHA HTML/2.jpg"style="max-width: 80%; height: auto;" /> 
+        <p/> <h3>Unique Amber Bottle &amp; Wrapper</h3>
+<p/>
+          Ensures drug stability and potency throughout the course.
+        </div>
+      <!-- Card 3 -->
+      <div class="snapshot-card">
+        <img src="D:\2019 Q1\HO meeting\2025\ZAHA HTML/3.png"style="max-width: 68%; height: auto;" /> 
+        <h3>MOH Approved & Tested</h3>
+        <p>
+          Every batch is MOH tested, guaranteeing consistent quality, safety,& reliability. So whether you're a parent or a pediatrician, you can be confident every drop is crafted with the highest standards 
+         
+        </p>
+      </div>
+      <!-- Card 4 -->
+      <div class="snapshot-card">
+        <img src="D:\2019 Q1\HO meeting\2025\ZAHA HTML/4.png"style="max-width: 68%; height: auto;" /> 
+        <h3>Accurate Dosing (30ml)</h3>
+        <p>
+          ZAHA Suspension comes in a 30ml bottle, carefully designed for accurate dosing up to 40kg—ensuring child gets exactly what they need, no less, no more. 
+         
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Deeper Emotional Hook: Patient Experience -->
+  <section class="container">
+    <div class="dual-column">
+      <img src="D:\2019 Q1\HO meeting\2025\ZAHA HTML/5.png"style="max-width: 34%; height: auto;" /> 
+      <div class="text-block">
+        <h2>Turning Concerned Parents into Confident Advocates</h2>
+        <p>
+          Imagine giving your child medicine that doesn’t come with frowns or refusal. ZAHA’s delightful Strawberry & Banana flavor turns every spoonful into a smile. It's not just a flavor—it's a carefully chosen preference, backed by the National Institute for Health Research (NIHR), because kids deserve comfort with every dose.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Clinical Efficacy & Stability -->
+  <section class="container">
+    <div class="dual-column">
+      <img src="D:\2019 Q1\HO meeting\2025\ZAHA HTML/6.PNG"style="max-width: 10%; height: auto;" /> 
+      <div class="text-block">
+        <h2>A Guardian in a Bottle: ZAHA’s Dual Protection Promise</h2>
+        <p>
+          Every parent wants reassurance that their child’s medicine is safe and effective. ZAHA understands this. That’s why it comes with Amber Bottle + Extra Wrapper protect the active ingredient from heat and light, ensuring consistent potency throughout the full course.
+
+        </p>
+        <p>
+          MOH &amp; KMCA endorsements further validate its safety 
+          and efficacy—less worry about subtherapeutic doses in 
+          later stages of treatment.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials & Real-World Feedback -->
+  <section class="container">
+    <h2 style="text-align: center;">What Your Colleagues Are Saying</h2>
+    <div class="testimonials">
+      <div class="testimonial">
+        ZAHA has drastically reduced compliance issues among my young patients—fewer missed doses mean faster recoveries.
+      </div>
+      <div class="testimonial">
+        Parents actually ask for ZAHA because their kids don’t resist the strawberry-banana taste. It's a big win!
+      </div>
+      <div class="testimonial">
+        I trust the stability of the formulation. Even on Day 10, the antibiotic performs reliably—my top choice for pediatric URTI.
+      </div>
+    </div>
+    <p style="margin-top: 1rem;">
+      <img 
+  src="D:\2019 Q1\HO meeting\2025\ZAHA HTML\9.PNG"
+  style="display: block; margin: 0 auto; max-width: 100%; height: auto;"
+  alt="Centered Image"
+/>
+    </p>
+  </section>
+
+  <!-- Compliance & Fun Zone (Optional Section) -->
+  <section class="container">
+    <h2 style="text-align: center;">ZAHA Fun Zone - More Than Medicine, Encouraging Positive Clinic Visits </h2>
+<img 
+  src="D:\2019 Q1\HO meeting\2025\ZAHA HTML\7.JPG"
+  style="display: block; margin: 0 auto; max-width: 100%; height: auto;"
+  alt="Centered Image"
+
+<section>
+  <p style="text-align: center;">
+    From coloring pages to puzzles, ZAHA offers resources that turn waiting 
+    rooms into spaces of laughter and learning.<br>
+    A calm child is more likely to comply with medication and follow-up, 
+    creating happier outcomes for everyone.
+  </p>
+</section>
+
+  <!-- Summation & Final CTA -->
+  <section class="final-cta container">
+    <h2>ZAHA: A Partner in Better Pediatric Outcomes</h2>
+    <p>
+      <b>ZAHA: More Than Medicine</b> — It’s a Companion in Every URTI Journey Whether you’re a caregiver ensuring your child’s comfort, or a doctor delivering reliable care, ZAHA is there. Not just to cure, but to create positive experiences, encourage compliance,& make every step toward recovery a little brighter
+    </p>
+    <a href="#prescribing-info" class="cta-button">Download Prescribing Guide</a>
+    
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>
+      <a href="#about">About ZAHA</a> | 
+      <a href="#clinical-data">Clinical Data</a> | 
+      <a href="#contact">Contact</a> | 
+      <a href="#disclaimer">Disclaimer</a>
+    </p>
+    <p style="margin-top: 1rem;">
+      &copy; 2025 ZAHA. All Rights Reserved.  
+      <br/>
+      For healthcare professionals only.
+    </p>
+    <!-- Add MOH / KMCA Logos if desired -->
+  </footer>
+
+</body>
+</html>
